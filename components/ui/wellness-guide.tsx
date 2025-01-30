@@ -2,6 +2,7 @@ import { Search, BookOpen, LineChart, Lightbulb, Users, Brain, Target } from "lu
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface GuideCardProps {
   category: string;
@@ -21,9 +22,10 @@ function GuideCard({ category, title, description, icon, className, imageUrl }: 
     )}>
       {imageUrl && (
         <div className="absolute inset-0 w-full h-full">
-          <img
+          <Image
             src={imageUrl}
-            alt=""
+            alt="Background"
+            fill
             className="h-full w-full object-cover grayscale opacity-10 transition-all group-hover:opacity-15"
           />
         </div>

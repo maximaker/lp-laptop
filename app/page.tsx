@@ -14,6 +14,7 @@ import { VitaminsGrid } from "@/components/ui/vitamins-grid"
 import { SuccessStories } from "@/components/ui/success-stories"
 import { WellnessGuide } from "@/components/ui/wellness-guide"
 import { CollaborationTimeline } from "@/components/ui/collaboration-timeline"
+import { HeroSectionDemo } from "@/components/ui/hero-section-demo"
 
 export default function Page() {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -159,37 +160,7 @@ export default function Page() {
       </header>
 
       <main className="flex min-h-screen flex-col items-center justify-between">
-        {/* Hero Section */}
-        <AuroraBackground className="w-full min-h-[90vh] py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6 relative z-10">
-            <motion.div
-              initial={{ opacity: 0.0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="flex flex-col items-center space-y-4 text-center"
-            >
-              <div className="space-y-2 max-w-[800px]">
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-                  Is your digital product as healthy as it could be?
-            </h1>
-                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Scaling a product takes more than luck—it takes clarity, strategy, and care. At Digital Vitamins, 
-                  we diagnose your product's challenges, prescribe solutions, and help it thrive in a competitive market.
-                </p>
-              </div>
-              <div className="space-x-4">
-                <Button className="bg-primary text-primary-foreground">Get your diagnosis</Button>
-                <Button variant="outline" className="border-border bg-background text-foreground">
-                  Explore the vitamins
-              </Button>
-            </div>
-            </motion.div>
-          </div>
-        </AuroraBackground>
+        <HeroSectionDemo />
 
         {/* Feature Tabs Section */}
         <FeatureTabs />
@@ -230,11 +201,11 @@ export default function Page() {
                 What does your product need? Find out in minutes.
               </h2>
               <p className="text-muted-foreground mb-8">
-                Take our interactive quiz to identify the right vitamins for your product's health.
+                Take our interactive quiz to identify the right vitamins for your product&apos;s health.
               </p>
               <Button size="lg" className="bg-primary text-primary-foreground">
                 Take the quiz
-              </Button>
+                        </Button>
             </div>
           </div>
         </section>
@@ -247,7 +218,7 @@ export default function Page() {
           <div className="max-w-[800px] mx-auto text-center">
             <div className="scroll-animation">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
-                Ready to boost your product's health?
+                Ready to boost your product&apos;s health?
               </h2>
               <div className="space-x-4">
                 <Button size="lg" className="bg-primary text-primary-foreground">

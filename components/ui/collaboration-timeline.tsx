@@ -7,7 +7,7 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { Search, Zap, LineChart, Target } from "lucide-react";
+import { Search, Zap, LineChart, Target, RotateCw, Gauge, ArrowUpRight } from "lucide-react";
 
 interface TimelineEntry {
   title: string;
@@ -20,7 +20,7 @@ const collaborationSteps = [
     content: (
       <div>
         <p className="text-muted-foreground text-sm md:text-base font-normal mb-8">
-          We begin with a thorough analysis of your product's current state, understanding your goals, challenges, and market position.
+          We begin with a thorough analysis of your product&apos;s current state, understanding your goals, challenges, and market position.
         </p>
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-muted rounded-lg p-4">
@@ -61,7 +61,7 @@ const collaborationSteps = [
     content: (
       <div>
         <p className="text-muted-foreground text-sm md:text-base font-normal mb-8">
-          We implement the prescribed solutions with precision, ensuring every change contributes to your product's growth.
+          We implement the prescribed solutions with precision, ensuring every change contributes to your product&apos;s growth.
         </p>
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-muted rounded-lg p-4">
@@ -73,6 +73,33 @@ const collaborationSteps = [
             <LineChart className="h-6 w-6 text-primary mb-2" />
             <h4 className="font-medium mb-1">Monitoring</h4>
             <p className="text-xs text-muted-foreground">Continuous tracking of progress and results</p>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Growth",
+    content: (
+      <div>
+        <p className="text-muted-foreground text-sm md:text-base font-normal mb-8">
+          We provide ongoing support and optimization to ensure your product continues to evolve and thrive in the long term.
+        </p>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="bg-muted rounded-lg p-4">
+            <RotateCw className="h-6 w-6 text-primary mb-2" />
+            <h4 className="font-medium mb-1">Maintenance</h4>
+            <p className="text-xs text-muted-foreground">Regular updates and improvements</p>
+          </div>
+          <div className="bg-muted rounded-lg p-4">
+            <Gauge className="h-6 w-6 text-primary mb-2" />
+            <h4 className="font-medium mb-1">Performance</h4>
+            <p className="text-xs text-muted-foreground">Continuous optimization and tuning</p>
+          </div>
+          <div className="bg-muted rounded-lg p-4">
+            <ArrowUpRight className="h-6 w-6 text-primary mb-2" />
+            <h4 className="font-medium mb-1">Growth</h4>
+            <p className="text-xs text-muted-foreground">Scaling strategies and support</p>
           </div>
         </div>
       </div>
